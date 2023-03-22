@@ -6,9 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    chart: reejig
     repoURL: https://github.com/aadi308/helm-argocd.git
+    chart: reejig
     helm:
+      valueFiles:
+      - values.yaml
       releaseName: reejig
   destination:
     server: "https://kubernetes.default.svc"
