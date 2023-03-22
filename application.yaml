@@ -1,20 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: reejig
+  name: reejiig-argo-application
   namespace: argocd
 spec:
   project: default
+
   source:
     repoURL: https://github.com/aadi308/helm-argocd.git
-    chart: reejig
-    helm:
-      valueFiles:
-      - values.yaml
-      releaseName: reejig
-  destination:
-    server: "https://kubernetes.default.svc"
-    namespace: reejig-argo
+    path: helm-argo
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: myapp
+
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
