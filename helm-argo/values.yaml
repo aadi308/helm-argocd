@@ -8,7 +8,7 @@ image:
   repository: 773914189848.dkr.ecr.ap-south-1.amazonaws.com/docker-php
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "3a4c072ef102487477314743779946176e9ac01c"
+  tag: "1da98024ca5462bc12b8d53b8e1d43108fd99293"
 
 imagePullSecrets:
   - name: regcred
